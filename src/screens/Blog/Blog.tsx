@@ -139,60 +139,67 @@ export const Blog = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Featured Post */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 className="font-poppins font-medium text-2xl text-[#00265f] mb-8">Featured Article</h2>
-            <Card className="border-none shadow-xl overflow-hidden">
-              <div className="grid lg:grid-cols-2">
-                <div className="relative h-64 lg:h-auto">
-                  <img
-                    src={featuredPost.image}
-                    alt={featuredPost.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-[#00265f] text-white px-3 py-1 rounded-full text-sm font-roboto">
-                      Featured
-                    </span>
-                  </div>
-                </div>
-                <CardContent className="p-8 lg:p-12">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="bg-[#eafaff] text-[#00265f] px-3 py-1 rounded-full text-sm font-roboto">
-                      {featuredPost.category}
-                    </span>
-                    <span className="text-[#404040] text-sm font-roboto">
-                      {featuredPost.readTime}
-                    </span>
-                  </div>
-                  <h3 className="font-poppins font-medium text-2xl text-[#00265f] mb-4 leading-tight">
-                    {featuredPost.title}
-                  </h3>
-                  <p className="font-roboto text-[#404040] leading-relaxed mb-6">
-                    {featuredPost.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <User className="w-5 h-5 text-[#404040]" />
-                      <span className="font-roboto text-[#404040]">{featuredPost.author}</span>
-                      <Calendar className="w-5 h-5 text-[#404040] ml-4" />
-                      <span className="font-roboto text-[#404040]">{featuredPost.date}</span>
-                    </div>
-                    <Link to={`/blog/${featuredPost.slug}`}>
-                      <Button className="bg-[#00265f] hover:bg-[#00265f]/90 text-white font-poppins font-medium">
-                        Read More
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </div>
-            </Card>
+{/* Featured Post */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* responsive horizontal padding */}
+    <div className="mb-12">
+      <h2 className="font-poppins font-medium text-2xl text-[#00265f] mb-8">
+        Featured Article
+      </h2>
+      <Card className="border-none shadow-xl overflow-hidden">
+        <div className="flex flex-col lg:grid lg:grid-cols-2">
+          {/* Image */}
+          <div className="relative w-full h-64 sm:h-80 lg:h-auto">
+            <img
+              src={featuredPost.image}
+              alt={featuredPost.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-4 left-4">
+              <span className="bg-[#00265f] text-white px-3 py-1 rounded-full text-sm font-roboto">
+                Featured
+              </span>
+            </div>
           </div>
+
+          {/* Text Content */}
+          <CardContent className="p-6 sm:p-8 lg:p-12">
+            <div className="flex flex-wrap items-center gap-4 mb-4">
+              <span className="bg-[#eafaff] text-[#00265f] px-3 py-1 rounded-full text-sm font-roboto">
+                {featuredPost.category}
+              </span>
+              <span className="text-[#404040] text-sm font-roboto">
+                {featuredPost.readTime}
+              </span>
+            </div>
+
+            <h3 className="font-poppins font-medium text-2xl text-[#00265f] mb-4 leading-tight">
+              {featuredPost.title}
+            </h3>
+            <p className="font-roboto text-[#404040] leading-relaxed mb-6">
+              {featuredPost.excerpt}
+            </p>
+
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex items-center gap-3 flex-wrap">
+                <User className="w-5 h-5 text-[#404040]" />
+                <span className="font-roboto text-[#404040]">{featuredPost.author}</span>
+                <Calendar className="w-5 h-5 text-[#404040] ml-4" />
+                <span className="font-roboto text-[#404040]">{featuredPost.date}</span>
+              </div>
+              <Link to={`/blog/${featuredPost.slug}`}>
+                <Button className="bg-[#00265f] hover:bg-[#00265f]/90 text-white font-poppins font-medium">
+                  Read More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
         </div>
-      </section>
+      </Card>
+    </div>
+  </div>
+</section>
 
       {/* Blog Posts Grid */}
       <section className="pb-20 bg-white">
