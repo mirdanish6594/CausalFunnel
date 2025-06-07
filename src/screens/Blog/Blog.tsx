@@ -260,28 +260,6 @@ export const Blog = (): JSX.Element => {
           )}
         </div>
       </section>
-
-      {/* Newsletter Section */}
-      <section className="py-20 bg-[#eafaff]">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-poppins font-medium text-3xl text-[#00265f] mb-6">
-            Stay Updated
-          </h2>
-          <p className="font-roboto text-lg text-[#404040] mb-8 max-w-2xl mx-auto">
-            Get the latest insights on conversion optimization and AI technology delivered to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <Input
-              type="email"
-              placeholder="Enter your email..."
-              className="flex-1 h-12 border-gray-300 focus:border-[#00265f]"
-            />
-            <Button className="bg-[#00265f] hover:bg-[#00265f]/90 text-white font-poppins font-medium px-8 h-12">
-              Subscribe
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
