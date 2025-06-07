@@ -256,7 +256,7 @@ export const Company = (): JSX.Element => {
     </div>
 
     <div className="relative">
-      {/* Vertical line - shown on all screens now */}
+      {/* Vertical line - shown on all screens */}
       <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#00265f]/20"></div>
 
       <div className="space-y-12">
@@ -264,8 +264,8 @@ export const Company = (): JSX.Element => {
           <div
             key={index}
             className={`
-              relative flex flex-col md:flex-row items-center
-              ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
+              relative flex flex-row items-center
+              ${index % 2 === 0 ? 'justify-start' : 'justify-end'}
             `}
           >
             {/* Dot - centered on the line */}
@@ -274,13 +274,7 @@ export const Company = (): JSX.Element => {
             </div>
 
             {/* Card - alternating sides for all screens */}
-            <div
-              className={`
-                w-full md:w-1/2
-                ${index % 2 === 0 ? 'pr-0 md:pr-8 text-left md:text-right' : 'pl-0 md:pl-8 text-left'}
-                mt-8 md:mt-0
-              `}
-            >
+            <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
               <Card className="border-none shadow-lg bg-white overflow-hidden">
                 <CardContent className="p-6">
                   <div className="font-poppins font-medium text-2xl text-[#00265f] mb-2 break-words">
@@ -295,9 +289,6 @@ export const Company = (): JSX.Element => {
                 </CardContent>
               </Card>
             </div>
-
-            {/* Spacer for opposite side - shown on all screens now */}
-            <div className={`w-1/2 ${index % 2 === 0 ? 'hidden md:block' : 'hidden md:block'}`}></div>
           </div>
         ))}
       </div>
