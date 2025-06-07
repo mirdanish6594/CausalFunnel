@@ -244,45 +244,51 @@ export const Company = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-[#eafaff]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-poppins font-medium text-3xl text-[#00265f] mb-4">
-              Our Journey
-            </h2>
-            <p className="font-roboto text-lg text-[#404040] max-w-2xl mx-auto">
-              Key milestones in our mission to revolutionize conversion intelligence
-            </p>
-          </div>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#00265f]/20"></div>
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <Card className="border-none shadow-lg bg-white">
-                      <CardContent className="p-6">
-                        <div className="font-poppins font-medium text-2xl text-[#00265f] mb-2">
-                          {item.year}
-                        </div>
-                        <h3 className="font-poppins font-medium text-lg text-[#00265f] mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="font-roboto text-[#404040]">
-                          {item.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+{/* Timeline Section */}
+<section className="py-20 bg-[#eafaff]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="font-poppins font-medium text-3xl text-[#00265f] mb-4">
+        Our Journey
+      </h2>
+      <p className="font-roboto text-lg text-[#404040] max-w-2xl mx-auto">
+        Key milestones in our mission to revolutionize conversion intelligence
+      </p>
+    </div>
+
+    <div className="relative">
+      {/* Vertical line for large screens */}
+      <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#00265f]/20"></div>
+
+      <div className="space-y-12">
+        {timeline.map((item, index) => (
+          <div key={index} className="relative flex flex-col sm:flex-row items-center">
+            {/* Connector dot */}
+            <div className="z-10 w-4 h-4 bg-[#00265f] rounded-full mb-4 sm:mb-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:top-6"></div>
+
+            {/* Card */}
+            <div className={`w-full sm:w-1/2 ${index % 2 === 0 ? 'sm:pr-8 sm:text-right' : 'sm:pl-8 sm:text-left sm:ml-auto'} text-center sm:text-inherit`}>
+              <Card className="border-none shadow-lg bg-white">
+                <CardContent className="p-6">
+                  <div className="font-poppins font-medium text-2xl text-[#00265f] mb-2 break-words">
+                    {item.year}
                   </div>
-                  <div className="w-4 h-4 bg-[#00265f] rounded-full relative z-10"></div>
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
+                  <h3 className="font-poppins font-medium text-lg text-[#00265f] mb-2 break-words">
+                    {item.title}
+                  </h3>
+                  <p className="font-roboto text-[#404040] break-words">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Awards Section */}
       <section className="py-20 bg-white">
