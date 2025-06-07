@@ -12,31 +12,26 @@ export const Home = (): JSX.Element => {
       icon: Target,
       title: 'High Accuracy Intent Prediction',
       description: 'Predict visitor buying intent with 95% accuracy using our AI models',
-      color: '#ff0808',
     },
     {
       icon: Zap,
       title: 'Automated Personalized Nudges',
       description: 'Deliver targeted offers and messages at the perfect moment',
-      color: '#b620e0',
     },
     {
       icon: TrendingUp,
       title: 'Boosts Conversion By 40%',
       description: 'Average conversion improvement across all our clients',
-      color: '#fdd402',
     },
     {
       icon: Clock,
       title: 'Real-time Conversion',
       description: 'Works instantly to convert visitors before they leave',
-      color: '#6c63ff',
     },
     {
       icon: Users,
       title: '200M+ Visitors Tested',
       description: 'Proven technology tested with millions of real visitors',
-      color: '#00df72',
     },
   ];
 
@@ -231,9 +226,9 @@ const logos = [
             <CardContent className="p-8 text-center">
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
-                style={{ backgroundColor: `${feature.color}20` }}
+                style={{ backgroundColor: '#eafaff' }} // Light blue background
               >
-                <feature.icon className="w-8 h-8" style={{ color: feature.color }} />
+                <feature.icon className="w-8 h-8 text-[#00265f]" /> {/* Icon color */}
               </div>
               <h3 className="font-poppins font-medium text-xl text-[#00265f] mb-4">
                 {feature.title}

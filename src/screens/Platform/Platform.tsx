@@ -45,12 +45,10 @@ export const Platform = (): JSX.Element => {
   ];
 
   const integrations = [
-    { name: 'Shopify', logo: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=100' },
-    { name: 'WooCommerce', logo: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=100' },
-    { name: 'Magento', logo: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=100' },
-    { name: 'BigCommerce', logo: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=100' },
-    { name: 'Salesforce', logo: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpg?auto=compress&cs=tinysrgb&w=100' },
-    { name: 'HubSpot', logo: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpg?auto=compress&cs=tinysrgb&w=100' },
+    { name: 'Shopify', logo: '/shopify.png' },
+    { name: 'BigCommerce', logo: '/commerce.png' },
+    { name: 'Salesforce', logo: '/salesforce.svg'},
+    { name: 'HubSpot', logo: '/hubspot.png' },
   ];
 
   const pricingPlans = [
@@ -173,41 +171,40 @@ export const Platform = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Integrations Section */}
-      <section className="py-20 bg-[#eafaff]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-poppins font-medium text-3xl text-[#00265f] mb-4">
-              Seamless Integrations
-            </h2>
-            <p className="font-roboto text-lg text-[#404040] max-w-2xl mx-auto">
-              Connect with your existing tools and platforms in minutes
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 text-center">
-                <img
-                  src={integration.logo}
-                  alt={integration.name}
-                  className="w-12 h-12 object-cover rounded-lg mx-auto mb-3"
-                />
-                <div className="font-roboto text-sm text-[#404040]">
-                  {integration.name}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <p className="font-roboto text-[#404040] mb-6">
-              Don't see your platform? We support custom integrations.
-            </p>
-            <Button variant="outline" className="border-[#00265f] text-[#00265f] hover:bg-[#00265f] hover:text-white font-poppins font-medium px-6 py-2 rounded-lg">
-              Request Integration
-            </Button>
-          </div>
+{/* Integrations Section */}
+<section className="py-20 bg-[#eafaff]">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="font-poppins font-medium text-3xl text-[#00265f] mb-4">
+        Seamless Integrations
+      </h2>
+      <p className="font-roboto text-lg text-[#404040] max-w-2xl mx-auto">
+        Connect with your existing tools and platforms in minutes
+      </p>
+    </div>
+
+    <div className="flex justify-center flex-wrap gap-12">
+      {integrations.map((integration, index) => (
+        <div key={index} className="text-center w-28">
+          <img
+            src={integration.logo}
+            alt={integration.name}
+            className="w2-28 h-24 object-contain mx-auto mb-"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="text-center mt-12">
+      <p className="font-roboto text-[#404040] mb-6">
+        Don't see your platform? We support custom integrations.
+      </p>
+      <Button variant="outline" className="border-[#00265f] text-[#00265f] hover:bg-[#00265f] hover:text-white font-poppins font-medium px-6 py-2 rounded-lg">
+        Request Integration
+      </Button>
+    </div>
+  </div>
+</section>
 
       {/* Pricing Section */}
       <section className="py-20 bg-white">
@@ -287,7 +284,7 @@ export const Platform = (): JSX.Element => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#00265f] font-poppins font-medium px-8 py-3 rounded-lg transition-all duration-200">
+            <Button variant="outline" className="bg-white text-[#00265f] hover:bg-gray-100 font-poppins font-medium px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200">
               Schedule Demo
             </Button>
           </div>

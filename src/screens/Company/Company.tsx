@@ -168,9 +168,9 @@ export const Company = (): JSX.Element => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/company.svg"
                 alt="Team collaboration"
-                className="w-full h-96 object-cover rounded-2xl shadow-lg"
+                className="w-full h-96"
               />
             </div>
           </div>
@@ -334,7 +334,7 @@ export const Company = (): JSX.Element => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#00265f] font-poppins font-medium px-8 py-3 rounded-lg transition-all duration-200">
+            <Button variant="outline" className="bg-white text-[#00265f] hover:bg-gray-100 font-poppins font-medium px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200">
               View Careers
             </Button>
           </div>

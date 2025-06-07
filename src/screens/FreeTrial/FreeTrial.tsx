@@ -390,7 +390,6 @@ export const FreeTrial = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Trust Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
