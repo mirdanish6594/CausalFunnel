@@ -256,8 +256,8 @@ export const Company = (): JSX.Element => {
     </div>
 
     <div className="relative">
-      {/* Vertical line for desktop only */}
-      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#00265f]/20"></div>
+      {/* Vertical line - shown on all screens now */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#00265f]/20"></div>
 
       <div className="space-y-12">
         {timeline.map((item, index) => (
@@ -268,20 +268,20 @@ export const Company = (): JSX.Element => {
               ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
             `}
           >
-            {/* Dot */}
-            <div className="absolute md:left-1/2 md:transform md:-translate-x-1/2 top-0 z-10">
+            {/* Dot - centered on the line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 z-10">
               <div className="w-4 h-4 bg-[#00265f] rounded-full mx-auto" />
             </div>
 
-            {/* Card */}
+            {/* Card - alternating sides for all screens */}
             <div
               className={`
                 w-full md:w-1/2
-                ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'}
+                ${index % 2 === 0 ? 'pr-0 md:pr-8 text-left md:text-right' : 'pl-0 md:pl-8 text-left'}
                 mt-8 md:mt-0
               `}
             >
-              <Card className="border-none shadow-lg bg-white">
+              <Card className="border-none shadow-lg bg-white overflow-hidden">
                 <CardContent className="p-6">
                   <div className="font-poppins font-medium text-2xl text-[#00265f] mb-2 break-words">
                     {item.year}
@@ -289,15 +289,15 @@ export const Company = (): JSX.Element => {
                   <h3 className="font-poppins font-medium text-lg text-[#00265f] mb-2 break-words">
                     {item.title}
                   </h3>
-                  <p className="font-roboto text-[#404040] break-words">
+                  <p className="font-roboto text-[#404040] break-words overflow-wrap">
                     {item.description}
                   </p>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Spacer for alignment on desktop */}
-            <div className="hidden md:block w-1/2"></div>
+            {/* Spacer for opposite side - shown on all screens now */}
+            <div className={`w-1/2 ${index % 2 === 0 ? 'hidden md:block' : 'hidden md:block'}`}></div>
           </div>
         ))}
       </div>
