@@ -244,11 +244,10 @@ export const Company = (): JSX.Element => {
         </div>
       </section>
 
-{/* Timeline Section */}
 <section className="py-20 bg-[#eafaff]">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
-      <h2 className="font-poppins font-medium text-3xl text-[#00265f] mb-4">
+      <h2 className="font-poppins font-medium text-3xl text-[#00265f] mb-4 break-words">
         Our Journey
       </h2>
       <p className="font-roboto text-lg text-[#404040] max-w-2xl mx-auto">
@@ -257,17 +256,31 @@ export const Company = (): JSX.Element => {
     </div>
 
     <div className="relative">
-      {/* Vertical line for large screens */}
-      <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#00265f]/20"></div>
+      {/* Vertical line for desktop only */}
+      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#00265f]/20"></div>
 
       <div className="space-y-12">
         {timeline.map((item, index) => (
-          <div key={index} className="relative flex flex-col sm:flex-row items-center">
-            {/* Connector dot */}
-            <div className="z-10 w-4 h-4 bg-[#00265f] rounded-full mb-4 sm:mb-0 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:top-6"></div>
+          <div
+            key={index}
+            className={`
+              relative flex flex-col md:flex-row items-center
+              ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
+            `}
+          >
+            {/* Dot */}
+            <div className="absolute md:left-1/2 md:transform md:-translate-x-1/2 top-0 z-10">
+              <div className="w-4 h-4 bg-[#00265f] rounded-full mx-auto" />
+            </div>
 
             {/* Card */}
-            <div className={`w-full sm:w-1/2 ${index % 2 === 0 ? 'sm:pr-8 sm:text-right' : 'sm:pl-8 sm:text-left sm:ml-auto'} text-center sm:text-inherit`}>
+            <div
+              className={`
+                w-full md:w-1/2
+                ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'}
+                mt-8 md:mt-0
+              `}
+            >
               <Card className="border-none shadow-lg bg-white">
                 <CardContent className="p-6">
                   <div className="font-poppins font-medium text-2xl text-[#00265f] mb-2 break-words">
@@ -282,6 +295,9 @@ export const Company = (): JSX.Element => {
                 </CardContent>
               </Card>
             </div>
+
+            {/* Spacer for alignment on desktop */}
+            <div className="hidden md:block w-1/2"></div>
           </div>
         ))}
       </div>
