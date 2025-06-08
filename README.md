@@ -15,19 +15,22 @@ This repository hosts the React-based website built for CausalFunnel, featuring 
 
 ```
 ├── public
-│   ├── index.html
+│   ├── img.svg
 │   └── ...
 ├── src
 │   ├── components
-│   ├── pages
-│   │   ├── Home.js
-│   │   └── Blog.js
-│   ├── App.js
-│   ├── index.js
+|   ├── lib
+│   ├── screens
+│   │   ├── Home
+│   │   ├── Blog
+│   │   └── ...
+│   ├── App.tsx
+│   ├── index.tsx
 │   └── ...
 ├── package.json
+├── vite.config.tx
+├── README.md
 ├── tailwind.config.js
-├── postcss.config.js
 └── ...
 ```
 
