@@ -1,7 +1,7 @@
 
 # CausalFunnel Website
 
-This repository hosts the React-based website built for CausalFunnel, featuring a fully responsive Home page and Blog page. The site is designed to offer smooth navigation and a visually engaging experience.
+This repository hosts the React-based website built for CausalFunnel, featuring a fully responsive Home page, Platform, Company, Free Tria and Blog page(alo the pages for each blog). The site is designed to offer smooth navigation and a visually engaging experience.
 
 ## 🚀 Live Demo
 
@@ -9,26 +9,28 @@ This repository hosts the React-based website built for CausalFunnel, featuring 
 
 ## 🎥 Walkthrough Video
 
-👉 [Watch the Walkthrough Video](#)  
-*(Replace `#` with the actual video link)*
+👉 [Watch the Walkthrough Video](https://drive.google.com/file/d/1tKbymM5FAM39jBoCagtUAhZomYWNdla3/view?usp=sharing)  
 
 ## 📁 Project Structure
 
 ```
 ├── public
-│   ├── index.html
+│   ├── img.svg
 │   └── ...
 ├── src
 │   ├── components
-│   ├── pages
-│   │   ├── Home.js
-│   │   └── Blog.js
-│   ├── App.js
-│   ├── index.js
+|   ├── lib
+│   ├── screens
+│   │   ├── Home
+│   │   ├── Blog
+│   │   └── ...
+│   ├── App.tsx
+│   ├── index.tsx
 │   └── ...
 ├── package.json
+├── vite.config.tx
+├── README.md
 ├── tailwind.config.js
-├── postcss.config.js
 └── ...
 ```
 
@@ -64,7 +66,7 @@ To run this project locally:
 
 3. **Start the development server:**
    ```bash
-   npm start
+   npm run dev
    ```
 
 4. **Open in browser:**  
@@ -77,4 +79,4 @@ To run this project locally:
 ## 📬 Contact
 
 For any questions or feedback, please feel free to reach out:  
-**[Your Name]** – [your email]
+**[Danish Mir]** – [mirdanish6594@gmail.com]
