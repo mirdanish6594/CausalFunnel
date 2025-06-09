@@ -1,7 +1,7 @@
 
 # CausalFunnel Website
 
-This repository hosts the React-based website built for CausalFunnel, featuring a fully responsive Home page, Platform, Company, Free Tria and Blog page(alo the pages for each blog). The site is designed to offer smooth navigation and a visually engaging experience.
+This repository hosts the React-based website built for CausalFunnel, featuring a fully responsive Home page, Platform, Company, Free Trial and Blog page(also the pages for each blog). The site is designed to offer smooth navigation and a visually engaging experience.
 
 ## 🚀 Live Demo
 
